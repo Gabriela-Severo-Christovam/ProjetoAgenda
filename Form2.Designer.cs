@@ -34,7 +34,7 @@
             lbl_senha = new Label();
             lbl_Repitasenha = new Label();
             txtbox_nome = new TextBox();
-            textBox2 = new TextBox();
+            txtbox_usuario = new TextBox();
             txtbox_telefone = new TextBox();
             txtbox_senha = new TextBox();
             txtbox_repitasenha = new TextBox();
@@ -99,14 +99,16 @@
             txtbox_nome.Name = "txtbox_nome";
             txtbox_nome.Size = new Size(387, 38);
             txtbox_nome.TabIndex = 5;
+            txtbox_nome.TextChanged += txtbox_nome_TextChanged;
             // 
-            // textBox2
+            // txtbox_usuario
             // 
-            textBox2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(21, 116);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(387, 38);
-            textBox2.TabIndex = 6;
+            txtbox_usuario.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtbox_usuario.Location = new Point(21, 116);
+            txtbox_usuario.Name = "txtbox_usuario";
+            txtbox_usuario.Size = new Size(387, 38);
+            txtbox_usuario.TabIndex = 6;
+            txtbox_usuario.TextChanged += txtbox_usuario_TextChanged;
             // 
             // txtbox_telefone
             // 
@@ -115,6 +117,7 @@
             txtbox_telefone.Name = "txtbox_telefone";
             txtbox_telefone.Size = new Size(387, 38);
             txtbox_telefone.TabIndex = 7;
+            txtbox_telefone.TextChanged += txtbox_telefone_TextChanged;
             // 
             // txtbox_senha
             // 
@@ -123,6 +126,7 @@
             txtbox_senha.Name = "txtbox_senha";
             txtbox_senha.Size = new Size(387, 38);
             txtbox_senha.TabIndex = 8;
+            txtbox_senha.TextChanged += txtbox_senha_TextChanged;
             // 
             // txtbox_repitasenha
             // 
@@ -131,10 +135,12 @@
             txtbox_repitasenha.Name = "txtbox_repitasenha";
             txtbox_repitasenha.Size = new Size(387, 38);
             txtbox_repitasenha.TabIndex = 9;
+            txtbox_repitasenha.TextChanged += txtbox_repitasenha_TextChanged;
             // 
             // btn_cadastrar2
             // 
             btn_cadastrar2.BackColor = Color.Transparent;
+            btn_cadastrar2.Enabled = false;
             btn_cadastrar2.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_cadastrar2.Location = new Point(24, 411);
             btn_cadastrar2.Name = "btn_cadastrar2";
@@ -164,7 +170,7 @@
             Controls.Add(txtbox_repitasenha);
             Controls.Add(txtbox_senha);
             Controls.Add(txtbox_telefone);
-            Controls.Add(textBox2);
+            Controls.Add(txtbox_usuario);
             Controls.Add(txtbox_nome);
             Controls.Add(lbl_Repitasenha);
             Controls.Add(lbl_senha);
@@ -185,7 +191,7 @@
         private Label lbl_senha;
         private Label lbl_Repitasenha;
         private TextBox txtbox_nome;
-        private TextBox textBox2;
+        private TextBox txtbox_usuario;
         private TextBox txtbox_telefone;
         private TextBox txtbox_senha;
         private TextBox txtbox_repitasenha;
