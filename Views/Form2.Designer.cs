@@ -148,6 +148,7 @@
             btn_cadastrar2.TabIndex = 10;
             btn_cadastrar2.Text = "Cadastrar";
             btn_cadastrar2.UseVisualStyleBackColor = false;
+            btn_cadastrar2.Click += btn_cadastrar2_Click;
             // 
             // btn_cancelar2
             // 
