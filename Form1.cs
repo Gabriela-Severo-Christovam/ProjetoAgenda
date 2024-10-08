@@ -14,7 +14,7 @@ namespace ProjetoAgenda
             if (txtbox_usuario.Text != "" && txtbox_senha.Text.Length >= 8)
             {
                 btn_entrar.Enabled = true;
-            }
+            } 
             else
             {
                 btn_entrar.Enabled = false;
