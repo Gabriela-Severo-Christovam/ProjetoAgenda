@@ -8,6 +8,6 @@ CREATE TABLE tbUsuarios(
     senha VARCHAR(8) NOT NULL
     );
     
-    select * from cadastro; 
+     select * from tbUsuarios; 
     
     

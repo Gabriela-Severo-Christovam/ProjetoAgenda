@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using ProjetoAgenda.controller;
 using ProjetoAgenda.Data;
 using System;
 using System.Collections.Generic;
@@ -59,31 +60,26 @@ namespace ProjetoAgenda
 
         private void btn_cadastrar2_Click(object sender, EventArgs e)
         {
-            MySqlConnection conexao = ConexaoDB.Criarconexao();
+            //Pegando os dados do formulario
+            string nome = txtbox_nome.Text;
+            string usuario = txtbox_usuario.Text;
+            string telefone = txtbox_telefone.Text;
+            string senha = txtbox_senha.Text;
 
-            //Abrindo conexão
-            conexao.Open();
+            //Instanciando o objeto UsuarioController
+            UsuarioController controleusuario = new UsuarioController();
 
-            //criando o comando SQL para inserir o usuario
-            string sql = $"INSERT INTO tbUsuarios (nome, usuario, telefone, senha) VALUES (@nome, @usuario, @telefone, @senha)";
+            //Inserindo o usuario
+            bool resultado = controleusuario.AddUsuario(nome, usuario, telefone, senha);
 
-            //criando o comando
-            MySqlCommand comando = new MySqlCommand(sql, conexao);
-
-            comando.Parameters.AddWithValue("@nome", txtbox_nome.Text);
-            comando.Parameters.AddWithValue("@usuario", txtbox_usuario.Text);
-            comando.Parameters.AddWithValue("@telefone", txtbox_telefone.Text);
-            comando.Parameters.AddWithValue("@senha", txtbox_senha.Text);
-
-            //executando a instrução SQL no banco 
-            comando.ExecuteNonQuery();
-
-            //fechando a conexão com o banco 
-            conexao.Close();
-
-            MessageBox.Show("Cadastro efetuado com sucesso! Você já pode realizar o loguin!");
-
-            this.Close();
+            if (resultado)
+            {
+                MessageBox.Show("Cadastro efetuado com sucesso");
+            }
+            else
+            {
+                MessageBox.Show("Não foi possivel cadastrar o usuário");
+            }
         }
     }
 }
