@@ -9,5 +9,7 @@ CREATE TABLE tbUsuarios(
     );
     
      select * from tbUsuarios; 
-    
-    
+   
+  // exemplo/ teste 
+  SELECT * from tbUsuarios
+  WHERE usuario ="godo" and binary senha ="AlexLind";  
