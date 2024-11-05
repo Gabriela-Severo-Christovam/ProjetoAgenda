@@ -1,3 +1,6 @@
+using ProjetoAgenda.controller;
+using ProjetoAgenda.Views;
+
 namespace ProjetoAgenda
 {
     public partial class frm_entrar : Form
@@ -14,7 +17,7 @@ namespace ProjetoAgenda
             if (txtbox_usuario.Text != "" && txtbox_senha.Text.Length >= 8)
             {
                 btn_entrar.Enabled = true;
-            } 
+            }
             else
             {
                 btn_entrar.Enabled = false;
@@ -35,6 +38,24 @@ namespace ProjetoAgenda
         private void txtbox_senha_TextChanged(object sender, EventArgs e)
         {
             validacao_loguin();
+        }
+
+        private void btn_entrar_Click(object sender, EventArgs e)
+        {
+            UsuarioController controleUsuario = new UsuarioController();
+
+            bool resultado = controleUsuario.ValidarLoguin(txtbox_usuario.Text, txtbox_senha.Text);
+
+            //MessageBox.Show(resultado.ToString());
+
+            if (resultado)
+            {
+                FrmPrincipal principal = new FrmPrincipal();
+
+                principal.Show();
+
+            }
+
         }
     }
 }

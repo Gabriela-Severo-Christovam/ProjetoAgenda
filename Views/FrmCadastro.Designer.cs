@@ -46,9 +46,9 @@
             // 
             lbl_nome.AutoSize = true;
             lbl_nome.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_nome.Location = new Point(21, 9);
+            lbl_nome.Location = new Point(18, 7);
             lbl_nome.Name = "lbl_nome";
-            lbl_nome.Size = new Size(79, 31);
+            lbl_nome.Size = new Size(66, 25);
             lbl_nome.TabIndex = 0;
             lbl_nome.Text = "Nome";
             // 
@@ -56,9 +56,9 @@
             // 
             lbl_usuario.AutoSize = true;
             lbl_usuario.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_usuario.Location = new Point(21, 81);
+            lbl_usuario.Location = new Point(18, 61);
             lbl_usuario.Name = "lbl_usuario";
-            lbl_usuario.Size = new Size(97, 31);
+            lbl_usuario.Size = new Size(81, 25);
             lbl_usuario.TabIndex = 1;
             lbl_usuario.Text = "Usuário";
             // 
@@ -66,9 +66,9 @@
             // 
             lbl_telefone.AutoSize = true;
             lbl_telefone.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_telefone.Location = new Point(18, 159);
+            lbl_telefone.Location = new Point(16, 119);
             lbl_telefone.Name = "lbl_telefone";
-            lbl_telefone.Size = new Size(105, 31);
+            lbl_telefone.Size = new Size(87, 25);
             lbl_telefone.TabIndex = 2;
             lbl_telefone.Text = "Telefone";
             // 
@@ -76,9 +76,9 @@
             // 
             lbl_senha.AutoSize = true;
             lbl_senha.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_senha.Location = new Point(19, 229);
+            lbl_senha.Location = new Point(17, 172);
             lbl_senha.Name = "lbl_senha";
-            lbl_senha.Size = new Size(79, 31);
+            lbl_senha.Size = new Size(66, 25);
             lbl_senha.TabIndex = 3;
             lbl_senha.Text = "Senha";
             // 
@@ -86,54 +86,59 @@
             // 
             lbl_Repitasenha.AutoSize = true;
             lbl_Repitasenha.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_Repitasenha.Location = new Point(19, 301);
+            lbl_Repitasenha.Location = new Point(17, 226);
             lbl_Repitasenha.Name = "lbl_Repitasenha";
-            lbl_Repitasenha.Size = new Size(168, 31);
+            lbl_Repitasenha.Size = new Size(139, 25);
             lbl_Repitasenha.TabIndex = 4;
             lbl_Repitasenha.Text = "Repita a senha";
             // 
             // txtbox_nome
             // 
             txtbox_nome.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtbox_nome.Location = new Point(21, 43);
+            txtbox_nome.Location = new Point(18, 32);
+            txtbox_nome.Margin = new Padding(3, 2, 3, 2);
             txtbox_nome.Name = "txtbox_nome";
-            txtbox_nome.Size = new Size(387, 38);
+            txtbox_nome.Size = new Size(339, 32);
             txtbox_nome.TabIndex = 5;
             txtbox_nome.TextChanged += txtbox_nome_TextChanged;
             // 
             // txtbox_usuario
             // 
             txtbox_usuario.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtbox_usuario.Location = new Point(21, 116);
+            txtbox_usuario.Location = new Point(18, 87);
+            txtbox_usuario.Margin = new Padding(3, 2, 3, 2);
             txtbox_usuario.Name = "txtbox_usuario";
-            txtbox_usuario.Size = new Size(387, 38);
+            txtbox_usuario.Size = new Size(339, 32);
             txtbox_usuario.TabIndex = 6;
             txtbox_usuario.TextChanged += txtbox_usuario_TextChanged;
             // 
             // txtbox_telefone
             // 
             txtbox_telefone.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtbox_telefone.Location = new Point(21, 191);
+            txtbox_telefone.Location = new Point(18, 143);
+            txtbox_telefone.Margin = new Padding(3, 2, 3, 2);
             txtbox_telefone.Name = "txtbox_telefone";
-            txtbox_telefone.Size = new Size(387, 38);
+            txtbox_telefone.Size = new Size(339, 32);
             txtbox_telefone.TabIndex = 7;
             txtbox_telefone.TextChanged += txtbox_telefone_TextChanged;
             // 
             // txtbox_senha
             // 
             txtbox_senha.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtbox_senha.Location = new Point(21, 264);
+            txtbox_senha.Location = new Point(18, 198);
+            txtbox_senha.Margin = new Padding(3, 2, 3, 2);
             txtbox_senha.Name = "txtbox_senha";
-            txtbox_senha.Size = new Size(387, 38);
+            txtbox_senha.Size = new Size(339, 32);
             txtbox_senha.TabIndex = 8;
             txtbox_senha.TextChanged += txtbox_senha_TextChanged;
             // 
             // txtbox_repitasenha
             // 
             txtbox_repitasenha.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtbox_repitasenha.Location = new Point(21, 340);
+            txtbox_repitasenha.Location = new Point(18, 255);
+            txtbox_repitasenha.Margin = new Padding(3, 2, 3, 2);
             txtbox_repitasenha.Name = "txtbox_repitasenha";
-            txtbox_repitasenha.Size = new Size(387, 38);
+            txtbox_repitasenha.Size = new Size(339, 32);
             txtbox_repitasenha.TabIndex = 9;
             txtbox_repitasenha.TextChanged += txtbox_repitasenha_TextChanged;
             // 
@@ -142,9 +147,10 @@
             btn_cadastrar2.BackColor = Color.Transparent;
             btn_cadastrar2.Enabled = false;
             btn_cadastrar2.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_cadastrar2.Location = new Point(24, 411);
+            btn_cadastrar2.Location = new Point(21, 308);
+            btn_cadastrar2.Margin = new Padding(3, 2, 3, 2);
             btn_cadastrar2.Name = "btn_cadastrar2";
-            btn_cadastrar2.Size = new Size(163, 65);
+            btn_cadastrar2.Size = new Size(143, 49);
             btn_cadastrar2.TabIndex = 10;
             btn_cadastrar2.Text = "Cadastrar";
             btn_cadastrar2.UseVisualStyleBackColor = false;
@@ -153,19 +159,20 @@
             // btn_cancelar2
             // 
             btn_cancelar2.Font = new Font("Segoe UI Semilight", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_cancelar2.Location = new Point(245, 411);
+            btn_cancelar2.Location = new Point(214, 308);
+            btn_cancelar2.Margin = new Padding(3, 2, 3, 2);
             btn_cancelar2.Name = "btn_cancelar2";
-            btn_cancelar2.Size = new Size(163, 65);
+            btn_cancelar2.Size = new Size(143, 49);
             btn_cancelar2.TabIndex = 11;
             btn_cancelar2.Text = "Cancelar";
             btn_cancelar2.UseVisualStyleBackColor = true;
             // 
             // frm_cadastrocliente
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Tomato;
-            ClientSize = new Size(432, 505);
+            ClientSize = new Size(378, 379);
             Controls.Add(btn_cancelar2);
             Controls.Add(btn_cadastrar2);
             Controls.Add(txtbox_repitasenha);
@@ -178,8 +185,9 @@
             Controls.Add(lbl_telefone);
             Controls.Add(lbl_usuario);
             Controls.Add(lbl_nome);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frm_cadastrocliente";
-            Text = "Form2";
+            Text = "Cadastro";
             ResumeLayout(false);
             PerformLayout();
         }

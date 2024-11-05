@@ -42,9 +42,9 @@
             // 
             lbl_usuario.AutoSize = true;
             lbl_usuario.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_usuario.Location = new Point(49, 37);
+            lbl_usuario.Location = new Point(43, 28);
             lbl_usuario.Name = "lbl_usuario";
-            lbl_usuario.Size = new Size(84, 28);
+            lbl_usuario.Size = new Size(69, 21);
             lbl_usuario.TabIndex = 0;
             lbl_usuario.Text = "Usuário";
             // 
@@ -52,35 +52,38 @@
             // 
             lbl_senha.AutoSize = true;
             lbl_senha.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_senha.Location = new Point(49, 143);
+            lbl_senha.Location = new Point(43, 107);
             lbl_senha.Name = "lbl_senha";
-            lbl_senha.Size = new Size(69, 28);
+            lbl_senha.Size = new Size(57, 21);
             lbl_senha.TabIndex = 1;
             lbl_senha.Text = "Senha";
             // 
             // txtbox_usuario
             // 
             txtbox_usuario.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtbox_usuario.Location = new Point(49, 70);
+            txtbox_usuario.Location = new Point(43, 52);
+            txtbox_usuario.Margin = new Padding(3, 2, 3, 2);
             txtbox_usuario.Name = "txtbox_usuario";
-            txtbox_usuario.Size = new Size(346, 38);
+            txtbox_usuario.Size = new Size(303, 32);
             txtbox_usuario.TabIndex = 2;
             txtbox_usuario.TextChanged += txtbox_usuario_TextChanged;
             // 
             // txtbox_senha
             // 
             txtbox_senha.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtbox_senha.Location = new Point(49, 174);
+            txtbox_senha.Location = new Point(43, 130);
+            txtbox_senha.Margin = new Padding(3, 2, 3, 2);
             txtbox_senha.Name = "txtbox_senha";
-            txtbox_senha.Size = new Size(346, 38);
+            txtbox_senha.Size = new Size(303, 32);
             txtbox_senha.TabIndex = 3;
             txtbox_senha.TextChanged += txtbox_senha_TextChanged;
             // 
             // btn_cadastrar
             // 
-            btn_cadastrar.Location = new Point(243, 287);
+            btn_cadastrar.Location = new Point(213, 215);
+            btn_cadastrar.Margin = new Padding(3, 2, 3, 2);
             btn_cadastrar.Name = "btn_cadastrar";
-            btn_cadastrar.Size = new Size(152, 59);
+            btn_cadastrar.Size = new Size(133, 44);
             btn_cadastrar.TabIndex = 4;
             btn_cadastrar.Text = "Cadastrar";
             btn_cadastrar.UseVisualStyleBackColor = true;
@@ -89,29 +92,32 @@
             // btn_entrar
             // 
             btn_entrar.Enabled = false;
-            btn_entrar.Location = new Point(49, 287);
+            btn_entrar.Location = new Point(43, 215);
+            btn_entrar.Margin = new Padding(3, 2, 3, 2);
             btn_entrar.Name = "btn_entrar";
-            btn_entrar.Size = new Size(152, 59);
+            btn_entrar.Size = new Size(133, 44);
             btn_entrar.TabIndex = 5;
             btn_entrar.Text = "Entrar";
             btn_entrar.UseVisualStyleBackColor = true;
+            btn_entrar.Click += btn_entrar_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.cadastro;
-            pictureBox1.Location = new Point(422, 46);
+            pictureBox1.Location = new Point(369, 34);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(363, 406);
+            pictureBox1.Size = new Size(318, 304);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
             // frm_entrar
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Tomato;
-            ClientSize = new Size(797, 450);
+            ClientSize = new Size(697, 338);
             Controls.Add(pictureBox1);
             Controls.Add(btn_entrar);
             Controls.Add(btn_cadastrar);
@@ -119,8 +125,9 @@
             Controls.Add(txtbox_usuario);
             Controls.Add(lbl_senha);
             Controls.Add(lbl_usuario);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frm_entrar";
-            Text = "Cadastro";
+            Text = "Loguin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

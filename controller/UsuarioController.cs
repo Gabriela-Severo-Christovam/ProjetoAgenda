@@ -98,7 +98,7 @@ namespace ProjetoAgenda.controller
 
             catch (Exception erro)
             {
-                MessageBox.Show($"Erro ao verificar o usuario.");
+                MessageBox.Show($"Erro ao verificar o usuario.{erro.Message}");
                 return false;
             }
 
