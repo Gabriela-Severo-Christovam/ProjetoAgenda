@@ -34,8 +34,6 @@
             editarToolStripMenuItem = new ToolStripMenuItem();
             cadastrarToolStripMenuItem = new ToolStripMenuItem();
             categoriasToolStripMenuItem = new ToolStripMenuItem();
-            trabalhoToolStripMenuItem = new ToolStripMenuItem();
-            casaToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,8 +56,9 @@
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(180, 22);
+            sairToolStripMenuItem.Size = new Size(93, 22);
             sairToolStripMenuItem.Text = "&Sair";
+            sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
             // editarToolStripMenuItem
             // 
@@ -77,22 +76,10 @@
             // 
             // categoriasToolStripMenuItem
             // 
-            categoriasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { trabalhoToolStripMenuItem, casaToolStripMenuItem });
             categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
             categoriasToolStripMenuItem.Size = new Size(180, 22);
             categoriasToolStripMenuItem.Text = "Categorias";
-            // 
-            // trabalhoToolStripMenuItem
-            // 
-            trabalhoToolStripMenuItem.Name = "trabalhoToolStripMenuItem";
-            trabalhoToolStripMenuItem.Size = new Size(180, 22);
-            trabalhoToolStripMenuItem.Text = "Trabalho";
-            // 
-            // casaToolStripMenuItem
-            // 
-            casaToolStripMenuItem.Name = "casaToolStripMenuItem";
-            casaToolStripMenuItem.Size = new Size(180, 22);
-            casaToolStripMenuItem.Text = "Casa";
+            categoriasToolStripMenuItem.Click += categoriasToolStripMenuItem_Click;
             // 
             // FrmPrincipal
             // 
@@ -104,6 +91,7 @@
             MainMenuStrip = menuStrip1;
             Name = "FrmPrincipal";
             Text = "FrmPrincipal";
+            FormClosed += FrmPrincipal_FormClosed;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -118,7 +106,5 @@
         private ToolStripMenuItem editarToolStripMenuItem;
         private ToolStripMenuItem cadastrarToolStripMenuItem;
         private ToolStripMenuItem categoriasToolStripMenuItem;
-        private ToolStripMenuItem trabalhoToolStripMenuItem;
-        private ToolStripMenuItem casaToolStripMenuItem;
     }
 }

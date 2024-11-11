@@ -166,6 +166,7 @@
             btn_cancelar2.TabIndex = 11;
             btn_cancelar2.Text = "Cancelar";
             btn_cancelar2.UseVisualStyleBackColor = true;
+            btn_cancelar2.Click += btn_cancelar2_Click;
             // 
             // frm_cadastrocliente
             // 

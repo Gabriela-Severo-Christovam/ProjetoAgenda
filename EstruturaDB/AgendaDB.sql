@@ -8,8 +8,17 @@ CREATE TABLE tbUsuarios(
     senha VARCHAR(8) NOT NULL
     );
     
-     select * from tbUsuarios; 
-   
+select * from tbUsuarios;  
+  
+CREATE TABLE tbCategorias(
+	cod_categoria INT AUTO_INCREMENT PRIMARY KEY,
+	categoria VARCHAR(60) NOT NULL
+	);
+
+SELECT * FROM tbCategorias;
+
+  
+  
   // exemplo/ teste 
   SELECT * from tbUsuarios
-  WHERE usuario ="godo" and binary senha ="AlexLind";  
+  WHERE usuario ="godo" and binary senha ="AlexLind";

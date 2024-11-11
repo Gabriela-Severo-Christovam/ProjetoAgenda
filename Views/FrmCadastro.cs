@@ -81,5 +81,14 @@ namespace ProjetoAgenda
                 MessageBox.Show("Não foi possivel cadastrar o usuário");
             }
         }
+
+        private void btn_cancelar2_Click(object sender, EventArgs e)
+        {
+            txtbox_nome.Clear();
+            txtbox_usuario.Clear();
+            txtbox_telefone.Clear();
+            txtbox_senha.Clear();
+            txtbox_repitasenha.Clear();
+        }
     }
 }
