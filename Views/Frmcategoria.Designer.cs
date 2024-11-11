@@ -31,7 +31,10 @@
             groupBox1 = new GroupBox();
             btn_cadastrar = new Button();
             txtbox_categoria = new TextBox();
+            dgvCategoria = new DataGridView();
+            button1 = new Button();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvCategoria).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -64,17 +67,38 @@
             txtbox_categoria.Size = new Size(257, 33);
             txtbox_categoria.TabIndex = 0;
             // 
+            // dgvCategoria
+            // 
+            dgvCategoria.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCategoria.Location = new Point(359, 30);
+            dgvCategoria.Name = "dgvCategoria";
+            dgvCategoria.Size = new Size(240, 174);
+            dgvCategoria.TabIndex = 1;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(257, 22);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 2;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Frmcategoria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Tomato;
-            ClientSize = new Size(368, 232);
+            ClientSize = new Size(635, 232);
+            Controls.Add(button1);
+            Controls.Add(dgvCategoria);
             Controls.Add(groupBox1);
             Name = "Frmcategoria";
             Text = "Frmcategoria";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvCategoria).EndInit();
             ResumeLayout(false);
         }
 
@@ -83,5 +107,7 @@
         private GroupBox groupBox1;
         private Button btn_cadastrar;
         private TextBox txtbox_categoria;
+        private DataGridView dgvCategoria;
+        private Button button1;
     }
 }

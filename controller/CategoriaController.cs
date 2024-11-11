@@ -2,6 +2,7 @@
 using ProjetoAgenda.Data;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,5 +53,48 @@ namespace ProjetoAgenda.controller
             }
         
         }
+
+        public DataTable GetCategorias()
+        {
+            //Criando uma conxão vazia
+            MySqlConnection conexao = null;
+
+            try
+            {
+                //inserindo a conexão usando a ConexaoDB que eu ja avia criado 
+                conexao = ConexaoDB.CriarConexao();
+
+                //Montei o SELECT que retorna todas as categorias 
+                string sql = "select cod_categoria AS 'Código', categoria AS 'Categoria' from tbCategorias;";
+
+                //Abri a conexão 
+                conexao.Open();
+
+                //Criei um adaptador 
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(sql, conexao);
+
+                //Criei uma tabela vazia 
+                DataTable tabela = new DataTable();
+
+                //Pedindo para o adaptador preencher a tabela 
+                adaptador.Fill(tabela);
+
+                //Retorno a tabela preenchida 
+                return tabela;
+            }
+
+            catch (Exception erro)
+            {
+                MessageBox.Show($"Erro ao recuperar categoria:{erro.Message}");
+                return new DataTable();
+            }
+            finally
+            {
+                //Fechei a conexão 
+                conexao.Close();
+            }
+
+        }
+
     }
 }

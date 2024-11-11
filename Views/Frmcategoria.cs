@@ -39,5 +39,12 @@ namespace ProjetoAgenda.Views
                 MessageBox.Show("Não foi possivel cadastrar o usuário");
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CategoriaController controleCategoria = new CategoriaController();
+            DataTable tabela = controleCategoria.GetCategorias();
+            dgvCategoria.DataSource = tabela;
+        }
     }
 }

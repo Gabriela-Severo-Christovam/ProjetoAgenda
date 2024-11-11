@@ -15,7 +15,7 @@ CREATE TABLE tbCategorias(
 	categoria VARCHAR(60) NOT NULL
 	);
 
-SELECT * FROM tbCategorias;
+select cod_categoria AS 'Código', categoria AS 'Categoria' from tbCategorias;
 
   
   
