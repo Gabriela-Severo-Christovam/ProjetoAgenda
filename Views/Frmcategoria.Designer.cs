@@ -97,7 +97,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Tomato;
-            ClientSize = new Size(907, 387);
+            ClientSize = new Size(934, 387);
             Controls.Add(btn_excluir);
             Controls.Add(dgvCategoria);
             Controls.Add(groupBox1);

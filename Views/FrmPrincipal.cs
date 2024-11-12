@@ -32,5 +32,11 @@ namespace ProjetoAgenda.Views
             Frmcategoria categoriafrm = new Frmcategoria();
             categoriafrm.ShowDialog();
         }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsuario usuariofrm = new FrmUsuario();
+            usuariofrm.ShowDialog();
+        }
     }
 }
