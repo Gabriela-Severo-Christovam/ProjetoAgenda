@@ -18,11 +18,18 @@ namespace ProjetoAgenda.Views
             InitializeComponent();
         }
 
+        private void AtualizarDataGrid()
+        {
+            CategoriaController controleCategoria = new CategoriaController();
+            DataTable tabela = controleCategoria.GetCategorias();
+            dgvCategoria.DataSource = tabela;
+        }
+
+
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
             //Pegando os dados do formulario
             string categoria = txtbox_categoria.Text;
-
 
             //Instanciando o objeto UsuarioController
             CategoriaController controleCategoria = new CategoriaController();
@@ -38,13 +45,24 @@ namespace ProjetoAgenda.Views
             {
                 MessageBox.Show("Não foi possivel cadastrar o usuário");
             }
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CategoriaController controleCategoria = new CategoriaController();
             DataTable tabela = controleCategoria.GetCategorias();
             dgvCategoria.DataSource = tabela;
         }
+
+
+        private void Frmcategoria_Load(object sender, EventArgs e)
+        {
+          AtualizarDataGrid();
+        }
+
+        private void btn_excluir_Click(object sender, EventArgs e)
+        {
+            int codigo = Convert.ToInt32(dgvCategoria.SelectedRows[0].Cells[0].Value);
+            CategoriaController categoria = new CategoriaController();
+            bool resultado = categoria.ExcluirCategoria(codigo);
+            AtualizarDataGrid();
+        }
+
     }
 }
