@@ -37,5 +37,28 @@ namespace ProjetoAgenda.Views
             bool resultado = categoria.ExcluirUsuario(nome);
             AtualizarDataGrid();
         }
+
+        private void btn_cadastrarnovasenha_Click(object sender, EventArgs e)
+        {
+            //Pegando os dados do formulario
+            string senha = txtbox_mudarsenha.Text;
+
+            string usuario = txtbox_usuario.Text;
+
+            //Instanciando o objeto UsuarioController
+            UsuarioController controleusuario = new UsuarioController();
+
+            //Inserindo o usuario
+            bool resultado = controleusuario.AlterarSenha(senha, usuario);
+
+            if (resultado)
+            {
+                MessageBox.Show("Cadastro efetuado com sucesso");
+            }
+            else
+            {
+                MessageBox.Show("Não foi possivel cadastrar o usuário");
+            }
+        }
     }
 }

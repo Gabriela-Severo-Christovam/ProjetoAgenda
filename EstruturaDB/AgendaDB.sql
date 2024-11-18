@@ -17,7 +17,9 @@ CREATE TABLE tbCategorias(
 
 select cod_categoria AS 'Código', categoria AS 'Categoria' from tbCategorias;
 
-  
+
+CREATE USER 'babalu'@'%' IDENTIFIED BY '1234567';
+select * from mysql.user;
   
   // exemplo/ teste 
   SELECT * from tbUsuarios

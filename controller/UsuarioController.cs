@@ -22,7 +22,9 @@ namespace ProjetoAgenda.controller
                 MySqlConnection conexao = ConexaoDB.CriarConexao();
 
                 // Comando SQL que será executado
-                string sql = "INSERT INTO tbUsuarios (nome, usuario, telefone, senha) VALUES (@nome, @usuario, @telefone, @senha);";
+                string sql = "INSERT INTO tbUsuarios (nome, usuario, telefone, senha) VALUES (@nome, @usuario, @telefone, @senha);" +
+                              $"CREATE USER '{usuario}'@'%' IDENTIFIED BY '{senha}'; "+
+                              $"GRANT SELECT, INSERT , UPDATE , DELETE ON dbagenda.* TO 'babalu'@'%';";
 
                 // Abri a conexão com o banco 
                 conexao.Open();
@@ -188,6 +190,51 @@ namespace ProjetoAgenda.controller
                 return false;
             }
         }
+
+        public bool AlterarSenha(string senha, string usuario)
+        {
+            try
+            {
+                // Cria conexão, estou ultilizando a classe ConexãoDB que está dentro da pasta DATA 
+                MySqlConnection conexao = ConexaoDB.CriarConexao();
+
+                // Comando SQL que será executado
+                string sql = "UPDATE tbUsuarios SET senha = @senha WHERE usuario = @usuario;";
+
+                // Abri a conexão com o banco 
+                conexao.Open();
+
+                // Esse cara é o responsavel por executar o comando SQL 
+                MySqlCommand comando = new MySqlCommand(sql, conexao);
+
+                // Estou trocando o valor dos @ pelas informações que serão cadastradas
+                // Essas informações vieram dos parametros da função
+                comando.Parameters.AddWithValue("@senha", senha);
+                comando.Parameters.AddWithValue("@usuario", usuario);
+
+                //Executando no banco de dados 
+                int LinhasAfetadas = comando.ExecuteNonQuery();
+
+                conexao.Close();
+
+                if (LinhasAfetadas > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+
+            catch (Exception erro)
+            {
+                MessageBox.Show($"Erro ao recuperar categoria:{erro.Message}");
+                return false;
+            }
+        }
+        
 
         
     }
