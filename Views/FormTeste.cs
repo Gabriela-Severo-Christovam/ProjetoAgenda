@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
 using ProjetoAgenda.Data;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoAgenda.VariableGlobal;
 
 namespace ProjetoAgenda.Views
 {
@@ -29,8 +31,18 @@ namespace ProjetoAgenda.Views
             }
             catch (Exception erro)
             {
-                MessageBox.Show($"Erro ao conectar! {erro.Message}");           
+                MessageBox.Show($"Erro ao conectar! {erro.Message}");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UserSession.usuario = textBox1.Text;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(UserSession.usuario);
         }
     }
 }
