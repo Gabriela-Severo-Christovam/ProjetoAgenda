@@ -24,3 +24,17 @@ select * from mysql.user;
   // exemplo/ teste 
   SELECT * from tbUsuarios
   WHERE usuario ="godo" and binary senha ="AlexLind";
+
+
+DELIMITER $$    
+CREATE TRIGGER trInsertCategoria 
+BEFORE
+INSERT
+ON tbCategorias 
+FOR EACH ROW
+BEGIN
+	SET NEW.usuario = CURRENT_USER();
+END;
+$$
+
+DELIMITER ;
