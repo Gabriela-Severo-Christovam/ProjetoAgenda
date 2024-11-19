@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            label2 = new Label();
             btn_cadastrar = new Button();
             txtbox_categoria = new TextBox();
             dgvCategoria = new DataGridView();
@@ -39,24 +40,30 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(btn_cadastrar);
             groupBox1.Controls.Add(txtbox_categoria);
             groupBox1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(63, 85);
-            groupBox1.Margin = new Padding(4, 5, 4, 5);
+            groupBox1.Location = new Point(44, 30);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(4, 5, 4, 5);
-            groupBox1.Size = new Size(386, 200);
+            groupBox1.Size = new Size(270, 140);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Insira nova categoria";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(8, 31);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 17);
+            label2.TabIndex = 4;
+            // 
             // btn_cadastrar
             // 
-            btn_cadastrar.Location = new Point(10, 125);
-            btn_cadastrar.Margin = new Padding(4, 5, 4, 5);
+            btn_cadastrar.Location = new Point(7, 100);
             btn_cadastrar.Name = "btn_cadastrar";
-            btn_cadastrar.Size = new Size(367, 38);
+            btn_cadastrar.Size = new Size(257, 23);
             btn_cadastrar.TabIndex = 1;
             btn_cadastrar.Text = "&Cadastrar";
             btn_cadastrar.UseVisualStyleBackColor = true;
@@ -65,28 +72,27 @@
             // txtbox_categoria
             // 
             txtbox_categoria.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtbox_categoria.Location = new Point(10, 57);
-            txtbox_categoria.Margin = new Padding(4, 5, 4, 5);
+            txtbox_categoria.Location = new Point(7, 45);
             txtbox_categoria.Name = "txtbox_categoria";
-            txtbox_categoria.Size = new Size(365, 45);
+            txtbox_categoria.Size = new Size(257, 33);
             txtbox_categoria.TabIndex = 0;
             // 
             // dgvCategoria
             // 
             dgvCategoria.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCategoria.Location = new Point(524, 14);
-            dgvCategoria.Margin = new Padding(4, 5, 4, 5);
+            dgvCategoria.Location = new Point(331, 8);
             dgvCategoria.Name = "dgvCategoria";
             dgvCategoria.RowHeadersWidth = 62;
             dgvCategoria.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCategoria.Size = new Size(343, 290);
+            dgvCategoria.Size = new Size(311, 174);
             dgvCategoria.TabIndex = 1;
             // 
             // btn_excluir
             // 
-            btn_excluir.Location = new Point(647, 321);
+            btn_excluir.Location = new Point(453, 193);
+            btn_excluir.Margin = new Padding(2);
             btn_excluir.Name = "btn_excluir";
-            btn_excluir.Size = new Size(112, 34);
+            btn_excluir.Size = new Size(78, 20);
             btn_excluir.TabIndex = 2;
             btn_excluir.Text = "Excluir";
             btn_excluir.UseVisualStyleBackColor = true;
@@ -94,14 +100,13 @@
             // 
             // Frmcategoria
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Tomato;
-            ClientSize = new Size(934, 387);
+            ClientSize = new Size(654, 232);
             Controls.Add(btn_excluir);
             Controls.Add(dgvCategoria);
             Controls.Add(groupBox1);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "Frmcategoria";
             Text = "Frmcategoria";
             Load += Frmcategoria_Load;
@@ -118,5 +123,6 @@
         private TextBox txtbox_categoria;
         private DataGridView dgvCategoria;
         private Button btn_excluir;
+        private Label label2;
     }
 }

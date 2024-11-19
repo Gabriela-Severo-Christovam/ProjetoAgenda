@@ -31,6 +31,7 @@ namespace ProjetoAgenda.Views
             //Pegando os dados do formulario
             string categoria = txtbox_categoria.Text;
 
+
             //Instanciando o objeto UsuarioController
             CategoriaController controleCategoria = new CategoriaController();
 
@@ -53,7 +54,7 @@ namespace ProjetoAgenda.Views
 
         private void Frmcategoria_Load(object sender, EventArgs e)
         {
-          AtualizarDataGrid();
+            AtualizarDataGrid();
         }
 
         private void btn_excluir_Click(object sender, EventArgs e)
@@ -63,6 +64,5 @@ namespace ProjetoAgenda.Views
             bool resultado = categoria.ExcluirCategoria(codigo);
             AtualizarDataGrid();
         }
-
     }
 }

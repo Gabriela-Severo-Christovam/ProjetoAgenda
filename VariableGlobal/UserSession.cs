@@ -13,7 +13,7 @@ namespace ProjetoAgenda.VariableGlobal
         //As variveis vão guardar informações so usuario 
        private static string _usuario = null;
        private static string _senha = null;
-        private static string _nome = null; 
+       private static string _nome = null; 
         //Controle do que sera inserido ou pego 
         public static string usuario 
           {
