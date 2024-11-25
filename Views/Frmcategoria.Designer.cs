@@ -34,19 +34,22 @@
             txtbox_categoria = new TextBox();
             dgvCategoria = new DataGridView();
             btn_excluir = new Button();
+            btn_alterar = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCategoria).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btn_alterar);
+            groupBox1.Controls.Add(btn_excluir);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(btn_cadastrar);
             groupBox1.Controls.Add(txtbox_categoria);
             groupBox1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.Location = new Point(44, 30);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(270, 140);
+            groupBox1.Size = new Size(270, 266);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Insira nova categoria";
@@ -61,9 +64,9 @@
             // 
             // btn_cadastrar
             // 
-            btn_cadastrar.Location = new Point(7, 100);
+            btn_cadastrar.Location = new Point(7, 93);
             btn_cadastrar.Name = "btn_cadastrar";
-            btn_cadastrar.Size = new Size(257, 23);
+            btn_cadastrar.Size = new Size(257, 47);
             btn_cadastrar.TabIndex = 1;
             btn_cadastrar.Text = "&Cadastrar";
             btn_cadastrar.UseVisualStyleBackColor = true;
@@ -84,27 +87,37 @@
             dgvCategoria.Name = "dgvCategoria";
             dgvCategoria.RowHeadersWidth = 62;
             dgvCategoria.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCategoria.Size = new Size(311, 174);
+            dgvCategoria.Size = new Size(517, 339);
             dgvCategoria.TabIndex = 1;
             // 
             // btn_excluir
             // 
-            btn_excluir.Location = new Point(453, 193);
+            btn_excluir.Location = new Point(8, 153);
             btn_excluir.Margin = new Padding(2);
             btn_excluir.Name = "btn_excluir";
-            btn_excluir.Size = new Size(78, 20);
+            btn_excluir.Size = new Size(256, 46);
             btn_excluir.TabIndex = 2;
             btn_excluir.Text = "Excluir";
             btn_excluir.UseVisualStyleBackColor = true;
             btn_excluir.Click += btn_excluir_Click;
+            // 
+            // btn_alterar
+            // 
+            btn_alterar.Location = new Point(8, 211);
+            btn_alterar.Margin = new Padding(2);
+            btn_alterar.Name = "btn_alterar";
+            btn_alterar.Size = new Size(256, 46);
+            btn_alterar.TabIndex = 5;
+            btn_alterar.Text = "Alterar";
+            btn_alterar.UseVisualStyleBackColor = true;
+            btn_alterar.Click += btn_alterar_Click;
             // 
             // Frmcategoria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Tomato;
-            ClientSize = new Size(654, 232);
-            Controls.Add(btn_excluir);
+            ClientSize = new Size(860, 359);
             Controls.Add(dgvCategoria);
             Controls.Add(groupBox1);
             Name = "Frmcategoria";
@@ -124,5 +137,6 @@
         private DataGridView dgvCategoria;
         private Button btn_excluir;
         private Label label2;
+        private Button btn_alterar;
     }
 }

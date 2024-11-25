@@ -39,3 +39,36 @@ END;
 $$
 
 DELIMITER ;
+
+
+// tbLog
+
+CREATE TABLE tbLog(
+	cod_log INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(40),
+    data_hora DATETIME,
+    descriçao VARCHAR(80)
+);
+
+DELIMITER $$    
+CREATE TRIGGER trlogcategoriadelete 
+AFTER
+DELETE
+ON tbCategorias
+FOR EACH ROW
+BEGIN
+	INSERT INTO tbLog
+    (usuario,
+    data_hora,
+    descriçao)
+    VALUES 
+	(USER(),
+    CURRENT_TIMESTAMP(),
+    CONCAT("A categoria", old.categoria, "foi excluida.")
+    );
+    
+END;
+$$
+
+DELIMITER ;
+

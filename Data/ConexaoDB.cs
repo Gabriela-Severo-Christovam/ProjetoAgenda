@@ -12,7 +12,7 @@ namespace ProjetoAgenda.Data
         static public MySqlConnection CriarConexao()
         {
             //string contendo as informações para conexão
-            string stringConexao = "Server=localhost;Database=dbAgenda;User ID=root;Password= root;";
+            string stringConexao = "Server=localhost;Database=dbAgenda;User ID=root;Password=root;";
 
             //criando conexão
             MySqlConnection conexao = new MySqlConnection(stringConexao);
@@ -22,7 +22,7 @@ namespace ProjetoAgenda.Data
 
         static public MySqlConnection CriarConexao(string usuario, string senha)
         {
-            string stringConexao = $"Server=localhost;Database=dbAgenda;User ID={usuario};Password= {senha};";
+            string stringConexao = $"Server=localhost;Database=dbAgenda;User ID={usuario};Password={senha};";
 
             MySqlConnection conexao = new MySqlConnection(stringConexao);
 

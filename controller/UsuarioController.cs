@@ -23,8 +23,8 @@ namespace ProjetoAgenda.controller
 
                 // Comando SQL que será executado
                 string sql = "INSERT INTO tbUsuarios (nome, usuario, telefone, senha) VALUES (@nome, @usuario, @telefone, @senha);" +
-                              $"CREATE USER '{usuario}'@'%' IDENTIFIED BY '{senha}'; "+
-                              $"GRANT SELECT, INSERT , UPDATE , DELETE ON dbagenda.* TO 'babalu'@'%';";
+                              $"CREATE USER '{usuario}'@'%' IDENTIFIED BY '{senha}'; " +
+                              $"GRANT SELECT, INSERT , UPDATE , DELETE ON dbagenda.* TO '{usuario}'@'%';";
 
                 // Abri a conexão com o banco 
                 conexao.Open();
@@ -199,7 +199,9 @@ namespace ProjetoAgenda.controller
                 MySqlConnection conexao = ConexaoDB.CriarConexao();
 
                 // Comando SQL que será executado
-                string sql = "UPDATE tbUsuarios SET senha = @senha WHERE usuario = @usuario;";
+                string sql = "UPDATE tbUsuarios SET senha = @senha WHERE usuario = @usuario;"+
+                              $"ALTER USER '{usuario}'@'%' IDENTIFIED BY '{senha}';"+
+                              $"FLUSH PRIVILEGES;";
 
                 // Abri a conexão com o banco 
                 conexao.Open();

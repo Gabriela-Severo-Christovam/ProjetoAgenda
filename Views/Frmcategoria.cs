@@ -64,5 +64,15 @@ namespace ProjetoAgenda.Views
             bool resultado = categoria.ExcluirCategoria(codigo);
             AtualizarDataGrid();
         }
+
+        private void btn_alterar_Click(object sender, EventArgs e)
+        {
+            int codigoCategoria = Convert.ToInt32(dgvCategoria.SelectedRows[0].Cells[0].Value);
+            CategoriaController categoria = new CategoriaController();
+
+            string usuarioCategoria = txtbox_categoria.Text;
+
+            bool resultado = categoria.AlterarCategoria(usuarioCategoria, codigoCategoria);
+        }
     }
 }
