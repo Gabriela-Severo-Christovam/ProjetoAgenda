@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoAgenda.VariableGlobal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,6 +43,12 @@ namespace ProjetoAgenda.Views
         private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            string bemvindo = $"Seja bem-vindo{UserSession.usuario}";
+            lbl_boasvindas.Text = bemvindo;
         }
     }
 }

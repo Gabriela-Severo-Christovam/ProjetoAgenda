@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI;
 using ProjetoAgenda.Data;
+using ProjetoAgenda.VariableGlobal;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -70,7 +71,7 @@ namespace ProjetoAgenda.controller
                 MySqlConnection conexao = ConexaoDB.CriarConexao();
 
                 //Comando SQL que será executado
-                string sql = @" SELECT* from tbUsuarios
+                string sql = @" SELECT usuario, senha, nome, telefone from tbUsuarios
                             WHERE usuario = @usuario 
                             AND binary senha = @senha;";
 
@@ -89,6 +90,9 @@ namespace ProjetoAgenda.controller
 
                 if (resultado.Read())
                 {
+                    UserSession.usuario = resultado.GetString("usuario");
+                    UserSession.nome = resultado.GetString("nome");
+                    UserSession.senha = resultado.GetString("senha");
                     conexao.Close();
                     return true;
                 }
