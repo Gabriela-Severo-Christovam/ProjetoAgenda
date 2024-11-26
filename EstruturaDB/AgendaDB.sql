@@ -17,7 +17,7 @@ CREATE TABLE tbCategorias(
 	);
 
 CREATE TABLE tbContato(
-	nome VARCHAR(80) NOT NULL,
+	contato VARCHAR(80) NOT NULL,
     telefone VARCHAR(15) PRIMARY KEY,
 	categoria VARCHAR(30) 
     );
