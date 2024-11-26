@@ -73,6 +73,8 @@ namespace ProjetoAgenda.Views
             string usuarioCategoria = txtbox_categoria.Text;
 
             bool resultado = categoria.AlterarCategoria(usuarioCategoria, codigoCategoria);
+
+            AtualizarDataGrid();
         }
     }
 }
