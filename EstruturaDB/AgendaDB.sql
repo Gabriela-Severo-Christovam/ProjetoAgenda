@@ -16,6 +16,12 @@ CREATE TABLE tbCategorias(
     usuario VARCHAR(20)
 	);
 
+CREATE TABLE tbContato(
+	nome VARCHAR(80) NOT NULL,
+    telefone VARCHAR(15) PRIMARY KEY,
+	categoria VARCHAR(30) 
+    );
+
 select cod_categoria AS 'Código', categoria AS 'Categoria' from tbCategorias;
 
 

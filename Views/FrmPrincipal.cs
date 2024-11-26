@@ -47,8 +47,14 @@ namespace ProjetoAgenda.Views
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            string bemvindo = $"Seja bem-vindo{UserSession.usuario}";
+            string bemvindo = $"Seja bem-vindo {UserSession.usuario}";
             lbl_boasvindas.Text = bemvindo;
+        }
+
+        private void contatoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmContato1 contato = new FrmContato1();
+            contato.ShowDialog();
         }
     }
 }
