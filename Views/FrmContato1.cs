@@ -31,7 +31,7 @@ namespace ProjetoAgenda.Views
             //Pegando os dados do formulario
             string contato = txtbox_contato.Text;
             string telefone = txtbox_telefone.Text;
-            string categoria = txtbox_categoria.Text;
+            string categoria = cmb_categoria.Text;
 
 
             //Instanciando o objeto UsuarioController
@@ -58,6 +58,36 @@ namespace ProjetoAgenda.Views
 
         private void FrmContato1_Load(object sender, EventArgs e)
         {
+            AtualizarDataGrid();
+            CategoriaController controlecategoria = new CategoriaController();
+            DataTable tabela = controlecategoria.GetCategorias();
+            cmb_categoria.DataSource = tabela;
+            cmb_categoria.DisplayMember = "categoria";
+
+        }
+
+        private void btn_excluir_Click(object sender, EventArgs e)
+        {
+
+            string telefone = Convert.ToString(dgv_contatos.SelectedRows[0].Cells[1].Value);
+            ContatoController contato = new ContatoController();
+            bool resultado = contato.ExcluirContato(telefone);
+            AtualizarDataGrid();
+        }
+
+
+//CONTINUAR...
+        private void btn_alterar_Click(object sender, EventArgs e)
+        {
+            int alterarcontato= Convert.ToInt32(dgv_contatos.SelectedRows[0].Cells[0].Value);
+            ContatoController contato = new ContatoController();
+
+            string usuarioContato = txtbox_contato.Text;
+            string usuarioTelefone = txtbox_telefone.Text;
+            string usuarioCategoria = cmb_categoria.Text;
+
+            bool resultado = contato.Alterar(usuarioContato, usuarioTelefone ,usuarioCategoria);
+
             AtualizarDataGrid();
         }
     }

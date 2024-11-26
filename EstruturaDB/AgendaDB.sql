@@ -78,3 +78,26 @@ $$
 
 DELIMITER ;
 
+
+
+DELIMITER $$    
+CREATE TRIGGER trloginserirContato 
+AFTER
+INSERT
+ON tbContato
+FOR EACH ROW
+BEGIN
+	INSERT INTO tbLog
+    (usuario,
+    data_hora,
+    descriçao)
+    VALUES 
+	(USER(),
+    CURRENT_TIMESTAMP(),
+    CONCAT("O contato", new.contato, "foi inserido.")
+    );
+    
+END;
+$$
+
+DELIMITER ;

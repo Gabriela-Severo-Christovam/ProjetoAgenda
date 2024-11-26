@@ -35,8 +35,8 @@
             cadastrarToolStripMenuItem = new ToolStripMenuItem();
             categoriasToolStripMenuItem = new ToolStripMenuItem();
             usuarioToolStripMenuItem = new ToolStripMenuItem();
-            lbl_boasvindas = new Label();
             contatoToolStripMenuItem = new ToolStripMenuItem();
+            lbl_boasvindas = new Label();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -78,7 +78,6 @@
             cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
             cadastrarToolStripMenuItem.Size = new Size(224, 26);
             cadastrarToolStripMenuItem.Text = "Cadastrar";
-            cadastrarToolStripMenuItem.Click += cadastrarToolStripMenuItem_Click;
             // 
             // categoriasToolStripMenuItem
             // 
@@ -90,9 +89,16 @@
             // usuarioToolStripMenuItem
             // 
             usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            usuarioToolStripMenuItem.Size = new Size(224, 26);
+            usuarioToolStripMenuItem.Size = new Size(155, 26);
             usuarioToolStripMenuItem.Text = "Usuario";
             usuarioToolStripMenuItem.Click += usuarioToolStripMenuItem_Click;
+            // 
+            // contatoToolStripMenuItem
+            // 
+            contatoToolStripMenuItem.Name = "contatoToolStripMenuItem";
+            contatoToolStripMenuItem.Size = new Size(155, 26);
+            contatoToolStripMenuItem.Text = "Contato";
+            contatoToolStripMenuItem.Click += contatoToolStripMenuItem_Click;
             // 
             // lbl_boasvindas
             // 
@@ -103,13 +109,6 @@
             lbl_boasvindas.Size = new Size(76, 31);
             lbl_boasvindas.TabIndex = 1;
             lbl_boasvindas.Text = "label1";
-            // 
-            // contatoToolStripMenuItem
-            // 
-            contatoToolStripMenuItem.Name = "contatoToolStripMenuItem";
-            contatoToolStripMenuItem.Size = new Size(224, 26);
-            contatoToolStripMenuItem.Text = "Contato";
-            contatoToolStripMenuItem.Click += contatoToolStripMenuItem_Click;
             // 
             // FrmPrincipal
             // 

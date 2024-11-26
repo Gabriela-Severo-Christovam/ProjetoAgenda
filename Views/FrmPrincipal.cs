@@ -40,11 +40,6 @@ namespace ProjetoAgenda.Views
             usuariofrm.ShowDialog();
         }
 
-        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             string bemvindo = $"Seja bem-vindo {UserSession.usuario}";

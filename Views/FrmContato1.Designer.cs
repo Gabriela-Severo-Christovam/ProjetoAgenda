@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            cmb_categoria = new ComboBox();
             btn_alterar = new Button();
             btn_excluir = new Button();
             btn_cadastrar = new Button();
-            txtbox_categoria = new TextBox();
             txtbox_telefone = new TextBox();
             label3 = new Label();
             label2 = new Label();
@@ -45,10 +45,10 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(cmb_categoria);
             groupBox1.Controls.Add(btn_alterar);
             groupBox1.Controls.Add(btn_excluir);
             groupBox1.Controls.Add(btn_cadastrar);
-            groupBox1.Controls.Add(txtbox_categoria);
             groupBox1.Controls.Add(txtbox_telefone);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
@@ -61,6 +61,14 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Cadastrar Contato";
             // 
+            // cmb_categoria
+            // 
+            cmb_categoria.FormattingEnabled = true;
+            cmb_categoria.Location = new Point(32, 201);
+            cmb_categoria.Name = "cmb_categoria";
+            cmb_categoria.Size = new Size(231, 28);
+            cmb_categoria.TabIndex = 10;
+            // 
             // btn_alterar
             // 
             btn_alterar.Location = new Point(101, 319);
@@ -69,6 +77,7 @@
             btn_alterar.TabIndex = 9;
             btn_alterar.Text = "Alterar";
             btn_alterar.UseVisualStyleBackColor = true;
+            btn_alterar.Click += btn_alterar_Click;
             // 
             // btn_excluir
             // 
@@ -78,6 +87,7 @@
             btn_excluir.TabIndex = 8;
             btn_excluir.Text = "Excluir";
             btn_excluir.UseVisualStyleBackColor = true;
+            btn_excluir.Click += btn_excluir_Click;
             // 
             // btn_cadastrar
             // 
@@ -88,13 +98,6 @@
             btn_cadastrar.Text = "Cadastrar";
             btn_cadastrar.UseVisualStyleBackColor = true;
             btn_cadastrar.Click += btn_cadastrar_Click;
-            // 
-            // txtbox_categoria
-            // 
-            txtbox_categoria.Location = new Point(32, 202);
-            txtbox_categoria.Name = "txtbox_categoria";
-            txtbox_categoria.Size = new Size(231, 27);
-            txtbox_categoria.TabIndex = 6;
             // 
             // txtbox_telefone
             // 
@@ -168,7 +171,6 @@
         private GroupBox groupBox1;
         private Label label1;
         private TextBox txtbox_contato;
-        private TextBox txtbox_categoria;
         private TextBox txtbox_telefone;
         private Label label3;
         private Label label2;
@@ -176,5 +178,6 @@
         private Button btn_excluir;
         private Button btn_cadastrar;
         private DataGridView dgv_contatos;
+        private ComboBox cmb_categoria;
     }
 }
