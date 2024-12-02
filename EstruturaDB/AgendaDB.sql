@@ -1,3 +1,17 @@
+
+select cod_categoria AS 'Código', categoria AS 'Categoria' from tbCategorias;
+
+
+CREATE USER 'babalu'@'%' IDENTIFIED BY '1234567';
+select * from mysql.user;
+  
+// exemplo/ teste 
+  SELECT * from tbUsuarios
+  WHERE usuario ="godo" and binary senha ="AlexLind";
+
+
+//CODIGOS ORGANIZADOS
+
 CREATE DATABASE dbAgenda;
 USE dbAgenda;
 
@@ -7,9 +21,7 @@ CREATE TABLE tbUsuarios(
     telefone VARCHAR(15),
     senha VARCHAR(8) NOT NULL
     );
-    
-select * from tbUsuarios;  
-  
+
 CREATE TABLE tbCategorias(
 	cod_categoria INT AUTO_INCREMENT PRIMARY KEY,
 	categoria VARCHAR(60) NOT NULL,
@@ -22,17 +34,13 @@ CREATE TABLE tbContato(
 	categoria VARCHAR(30) 
     );
 
-select cod_categoria AS 'Código', categoria AS 'Categoria' from tbCategorias;
+CREATE TABLE tbLog(
+	cod_log INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(40),
+    data_hora DATETIME,
+    descriçao VARCHAR(80)
+);
 
-
-CREATE USER 'babalu'@'%' IDENTIFIED BY '1234567';
-select * from mysql.user;
-  
-// exemplo/ teste 
-  SELECT * from tbUsuarios
-  WHERE usuario ="godo" and binary senha ="AlexLind";
-
-//Para aparecer o usuario nas modificações de categorias 
 DELIMITER $$    
 CREATE TRIGGER trInsertCategoria 
 BEFORE
@@ -45,16 +53,6 @@ END;
 $$
 
 DELIMITER ;
-
-
-// tbLog
-
-CREATE TABLE tbLog(
-	cod_log INT AUTO_INCREMENT PRIMARY KEY,
-    usuario VARCHAR(40),
-    data_hora DATETIME,
-    descriçao VARCHAR(80)
-);
 
 DELIMITER $$    
 CREATE TRIGGER trlogcategoriadelete 
