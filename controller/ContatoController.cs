@@ -150,9 +150,9 @@ namespace ProjetoAgenda.controller
 
                 // Comando SQL que será executado
                 string sql = "UPDATE tbContato" +
-                              $"SET contato = @contato" +
+                              $"SET contato = @contato;" +
                               $"SET telefone = @telefone;" +
-                              $"SET categoria = @categoria " +
+                              $"SET categoria = @categoria;" +
                               $"WHERE telefone = @telefone;";
 
                 // Abri a conexão com o banco 
@@ -166,9 +166,7 @@ namespace ProjetoAgenda.controller
                 comando.Parameters.AddWithValue("@contato", contato);
                 comando.Parameters.AddWithValue("@telefone", telefone);
                 comando.Parameters.AddWithValue("@categoria", categoria);
-                
-
-
+             
                 //Executando no banco de dados 
                 int LinhasAfetadas = comando.ExecuteNonQuery();
 

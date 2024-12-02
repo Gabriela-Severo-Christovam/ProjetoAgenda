@@ -79,7 +79,7 @@ namespace ProjetoAgenda.Views
 //CONTINUAR...
         private void btn_alterar_Click(object sender, EventArgs e)
         {
-            int alterarcontato= Convert.ToInt32(dgv_contatos.SelectedRows[0].Cells[0].Value);
+            int alterarcontato= Convert.ToInt32(dgv_contatos.SelectedRows[0].Cells[1].Value);
             ContatoController contato = new ContatoController();
 
             string usuarioContato = txtbox_contato.Text;

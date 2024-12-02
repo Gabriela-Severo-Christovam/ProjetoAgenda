@@ -54,9 +54,11 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(txtbox_contato);
-            groupBox1.Location = new Point(94, 28);
+            groupBox1.Location = new Point(82, 21);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(294, 409);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(257, 307);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Cadastrar Contato";
@@ -64,16 +66,18 @@
             // cmb_categoria
             // 
             cmb_categoria.FormattingEnabled = true;
-            cmb_categoria.Location = new Point(32, 201);
+            cmb_categoria.Location = new Point(28, 151);
+            cmb_categoria.Margin = new Padding(3, 2, 3, 2);
             cmb_categoria.Name = "cmb_categoria";
-            cmb_categoria.Size = new Size(231, 28);
+            cmb_categoria.Size = new Size(203, 23);
             cmb_categoria.TabIndex = 10;
             // 
             // btn_alterar
             // 
-            btn_alterar.Location = new Point(101, 319);
+            btn_alterar.Location = new Point(88, 239);
+            btn_alterar.Margin = new Padding(3, 2, 3, 2);
             btn_alterar.Name = "btn_alterar";
-            btn_alterar.Size = new Size(94, 39);
+            btn_alterar.Size = new Size(82, 29);
             btn_alterar.TabIndex = 9;
             btn_alterar.Text = "Alterar";
             btn_alterar.UseVisualStyleBackColor = true;
@@ -81,9 +85,10 @@
             // 
             // btn_excluir
             // 
-            btn_excluir.Location = new Point(169, 263);
+            btn_excluir.Location = new Point(148, 197);
+            btn_excluir.Margin = new Padding(3, 2, 3, 2);
             btn_excluir.Name = "btn_excluir";
-            btn_excluir.Size = new Size(94, 39);
+            btn_excluir.Size = new Size(82, 29);
             btn_excluir.TabIndex = 8;
             btn_excluir.Text = "Excluir";
             btn_excluir.UseVisualStyleBackColor = true;
@@ -91,9 +96,10 @@
             // 
             // btn_cadastrar
             // 
-            btn_cadastrar.Location = new Point(32, 263);
+            btn_cadastrar.Location = new Point(28, 197);
+            btn_cadastrar.Margin = new Padding(3, 2, 3, 2);
             btn_cadastrar.Name = "btn_cadastrar";
-            btn_cadastrar.Size = new Size(94, 39);
+            btn_cadastrar.Size = new Size(82, 29);
             btn_cadastrar.TabIndex = 7;
             btn_cadastrar.Text = "Cadastrar";
             btn_cadastrar.UseVisualStyleBackColor = true;
@@ -101,62 +107,67 @@
             // 
             // txtbox_telefone
             // 
-            txtbox_telefone.Location = new Point(32, 134);
+            txtbox_telefone.Location = new Point(28, 100);
+            txtbox_telefone.Margin = new Padding(3, 2, 3, 2);
             txtbox_telefone.Name = "txtbox_telefone";
-            txtbox_telefone.Size = new Size(231, 27);
+            txtbox_telefone.Size = new Size(203, 23);
             txtbox_telefone.TabIndex = 5;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(32, 171);
+            label3.Location = new Point(28, 128);
             label3.Name = "label3";
-            label3.Size = new Size(74, 20);
+            label3.Size = new Size(58, 15);
             label3.TabIndex = 4;
             label3.Text = "Categoria";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(32, 106);
+            label2.Location = new Point(28, 80);
             label2.Name = "label2";
-            label2.Size = new Size(66, 20);
+            label2.Size = new Size(51, 15);
             label2.TabIndex = 3;
             label2.Text = "Telefone";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(32, 38);
+            label1.Location = new Point(28, 28);
             label1.Name = "label1";
-            label1.Size = new Size(62, 20);
+            label1.Size = new Size(50, 15);
             label1.TabIndex = 1;
             label1.Text = "Contato";
             // 
             // txtbox_contato
             // 
-            txtbox_contato.Location = new Point(32, 69);
+            txtbox_contato.Location = new Point(28, 52);
+            txtbox_contato.Margin = new Padding(3, 2, 3, 2);
             txtbox_contato.Name = "txtbox_contato";
-            txtbox_contato.Size = new Size(231, 27);
+            txtbox_contato.Size = new Size(203, 23);
             txtbox_contato.TabIndex = 2;
             // 
             // dgv_contatos
             // 
             dgv_contatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_contatos.Location = new Point(441, 38);
+            dgv_contatos.Location = new Point(386, 28);
+            dgv_contatos.Margin = new Padding(3, 2, 3, 2);
             dgv_contatos.Name = "dgv_contatos";
             dgv_contatos.RowHeadersWidth = 51;
-            dgv_contatos.Size = new Size(394, 403);
+            dgv_contatos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv_contatos.Size = new Size(345, 302);
             dgv_contatos.TabIndex = 1;
             // 
             // FrmContato1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Tomato;
-            ClientSize = new Size(870, 510);
+            ClientSize = new Size(761, 382);
             Controls.Add(dgv_contatos);
             Controls.Add(groupBox1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FrmContato1";
             Text = "FrmContato1";
             Load += FrmContato1_Load;
