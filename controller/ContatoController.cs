@@ -149,11 +149,11 @@ namespace ProjetoAgenda.controller
 
 
                 // Comando SQL que será executado
-                string sql = "UPDATE tbContato" +
-                              $"SET contato = @contato;" +
-                              $"SET telefone = @telefone;" +
-                              $"SET categoria = @categoria;" +
-                              $"WHERE telefone = @telefone;";
+                string sql = @"UPDATE tbContato
+                              SET contato = @contato 
+                              SET telefone = @telefone 
+                              SET categoria = @categoria 
+                              WHERE telefone = @telefone;";
 
                 // Abri a conexão com o banco 
                 conexao.Open();
