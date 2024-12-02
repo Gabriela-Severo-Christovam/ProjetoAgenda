@@ -147,10 +147,13 @@ namespace ProjetoAgenda.controller
                 // Cria conexão, estou ultilizando a classe ConexãoDB que está dentro da pasta DATA 
                 MySqlConnection conexao = ConexaoDB.CriarConexao(UserSession.usuario, UserSession.senha);
 
+
                 // Comando SQL que será executado
-                string sql = "UPDATE tbContato\r\nSET contato = @contato\r\nWHERE telefone = @telefone;"+
-                              $"\"UPDATE tbCategorias\\r\\nSET telefone = @telefone\\r\\nWHERE telefone = @telefone;\"" +
-                              $"UPDATE tbContato\\r\\nSET categoria = @categoria\\r\\nWHERE telefone = @telefone;\"";
+                string sql = "UPDATE tbContato" +
+                              $"SET contato = @contato" +
+                              $"SET telefone = @telefone;" +
+                              $"SET categoria = @categoria " +
+                              $"WHERE telefone = @telefone;";
 
                 // Abri a conexão com o banco 
                 conexao.Open();
