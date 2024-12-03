@@ -39,8 +39,14 @@
             label1 = new Label();
             txtbox_contato = new TextBox();
             dgv_contatos = new DataGridView();
+            AVISOS = new GroupBox();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_contatos).BeginInit();
+            AVISOS.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -54,7 +60,8 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(txtbox_contato);
-            groupBox1.Location = new Point(82, 21);
+            groupBox1.ForeColor = SystemColors.ActiveCaptionText;
+            groupBox1.Location = new Point(36, 21);
             groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 2, 3, 2);
@@ -151,7 +158,7 @@
             // dgv_contatos
             // 
             dgv_contatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_contatos.Location = new Point(386, 28);
+            dgv_contatos.Location = new Point(339, 28);
             dgv_contatos.Margin = new Padding(3, 2, 3, 2);
             dgv_contatos.Name = "dgv_contatos";
             dgv_contatos.RowHeadersWidth = 51;
@@ -159,14 +166,74 @@
             dgv_contatos.Size = new Size(345, 302);
             dgv_contatos.TabIndex = 1;
             // 
+            // AVISOS
+            // 
+            AVISOS.Controls.Add(label7);
+            AVISOS.Controls.Add(label6);
+            AVISOS.Controls.Add(label5);
+            AVISOS.Controls.Add(label4);
+            AVISOS.ForeColor = SystemColors.ActiveCaptionText;
+            AVISOS.Location = new Point(36, 333);
+            AVISOS.Name = "AVISOS";
+            AVISOS.Size = new Size(649, 147);
+            AVISOS.TabIndex = 2;
+            AVISOS.TabStop = false;
+            AVISOS.Text = "AVISOS";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.ActiveCaptionText;
+            label4.Location = new Point(6, 22);
+            label4.Name = "label4";
+            label4.Size = new Size(391, 21);
+            label4.TabIndex = 0;
+            label4.Text = "Para cadastrar um telefone coloque apenas 8 numeros";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label5.ForeColor = SystemColors.ActiveCaptionText;
+            label5.Location = new Point(6, 61);
+            label5.Name = "label5";
+            label5.Size = new Size(559, 21);
+            label5.TabIndex = 1;
+            label5.Text = "Caso você queira alterar o contato de alguem apenas selecione  com um clique";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label6.ForeColor = SystemColors.ActiveCaptionText;
+            label6.Location = new Point(6, 86);
+            label6.Name = "label6";
+            label6.Size = new Size(515, 21);
+            label6.TabIndex = 2;
+            label6.Text = "na tabela(dgv) e coloque apenas  o  nome do contato e a nova categoria";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label7.ForeColor = SystemColors.ActiveCaptionText;
+            label7.Location = new Point(5, 113);
+            label7.Name = "label7";
+            label7.Size = new Size(555, 21);
+            label7.TabIndex = 3;
+            label7.Text = "NÃO PRECISA COLOCAR O TELEFONE NOVAMENTE, ai clique no botão alterar ";
+            // 
             // FrmContato1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Tomato;
-            ClientSize = new Size(761, 382);
+            ClientSize = new Size(723, 499);
+            Controls.Add(AVISOS);
             Controls.Add(dgv_contatos);
             Controls.Add(groupBox1);
+            ForeColor = SystemColors.ButtonHighlight;
             Margin = new Padding(3, 2, 3, 2);
             Name = "FrmContato1";
             Text = "FrmContato1";
@@ -174,6 +241,8 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_contatos).EndInit();
+            AVISOS.ResumeLayout(false);
+            AVISOS.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -190,5 +259,10 @@
         private Button btn_cadastrar;
         private DataGridView dgv_contatos;
         private ComboBox cmb_categoria;
+        private GroupBox AVISOS;
+        private Label label5;
+        private Label label4;
+        private Label label6;
+        private Label label7;
     }
 }

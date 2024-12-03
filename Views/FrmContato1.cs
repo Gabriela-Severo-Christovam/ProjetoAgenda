@@ -76,17 +76,17 @@ namespace ProjetoAgenda.Views
         }
 
 
-//CONTINUAR...
+
         private void btn_alterar_Click(object sender, EventArgs e)
         {
-            int alterarcontato= Convert.ToInt32(dgv_contatos.SelectedRows[0].Cells[1].Value);
+            int alterarcontato = Convert.ToInt32(dgv_contatos.SelectedRows[0].Cells[1].Value);
             ContatoController contato = new ContatoController();
 
             string usuarioContato = txtbox_contato.Text;
             string usuarioTelefone = txtbox_telefone.Text;
             string usuarioCategoria = cmb_categoria.Text;
 
-            bool resultado = contato.Alterar(usuarioContato, usuarioTelefone ,usuarioCategoria);
+            bool resultado = contato.Alterar(usuarioContato, alterarcontato, usuarioCategoria);
 
             if (resultado)
             {
@@ -98,7 +98,7 @@ namespace ProjetoAgenda.Views
             }
 
             AtualizarDataGrid();
-           
+
         }
     }
 }

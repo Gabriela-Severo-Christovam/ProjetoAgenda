@@ -140,7 +140,7 @@ namespace ProjetoAgenda.controller
             }
         }
 
-        public bool Alterar(string contato, string telefone, string categoria)
+        public bool Alterar(string contato, int telefone, string categoria)
         {
             try
             {
@@ -151,7 +151,6 @@ namespace ProjetoAgenda.controller
                 // Comando SQL que será executado
                 string sql = @"UPDATE tbContato
                               SET contato = @contato, 
-                              telefone = @telefone,
                               categoria = @categoria 
                               WHERE telefone = @telefone;";
 
@@ -166,6 +165,7 @@ namespace ProjetoAgenda.controller
                 comando.Parameters.AddWithValue("@contato", contato);
                 comando.Parameters.AddWithValue("@telefone", telefone);
                 comando.Parameters.AddWithValue("@categoria", categoria);
+
              
                 //Executando no banco de dados 
                 int LinhasAfetadas = comando.ExecuteNonQuery();

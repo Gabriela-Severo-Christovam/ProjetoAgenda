@@ -1,4 +1,3 @@
-
 CREATE DATABASE dbAgenda;
 USE dbAgenda;
 
@@ -17,7 +16,7 @@ CREATE TABLE tbCategorias(
 
 CREATE TABLE tbContato(
 	contato VARCHAR(80) NOT NULL,
-    telefone VARCHAR(15) PRIMARY KEY,
+    telefone VARCHAR(15) primary key,
 	categoria VARCHAR(30) 
     );
 
@@ -86,6 +85,8 @@ END;
 $$
 
 DELIMITER ;
+
+///////
 
 DELIMITER $$    
 CREATE TRIGGER trlogdeleteContato 
