@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             groupBox1 = new GroupBox();
             cmb_categoria = new ComboBox();
             btn_alterar = new Button();
@@ -39,15 +39,15 @@
             label2 = new Label();
             label1 = new Label();
             txtbox_contato = new TextBox();
-            dgv_contatos = new DataGridView();
             AVISOS = new GroupBox();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
+            dgv_contatos = new DataGridView();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgv_contatos).BeginInit();
             AVISOS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgv_contatos).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -156,19 +156,6 @@
             txtbox_contato.Size = new Size(203, 23);
             txtbox_contato.TabIndex = 2;
             // 
-            // dgv_contatos
-            // 
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dgv_contatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgv_contatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_contatos.Location = new Point(339, 28);
-            dgv_contatos.Margin = new Padding(3, 2, 3, 2);
-            dgv_contatos.Name = "dgv_contatos";
-            dgv_contatos.RowHeadersWidth = 51;
-            dgv_contatos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_contatos.Size = new Size(345, 302);
-            dgv_contatos.TabIndex = 1;
-            // 
             // AVISOS
             // 
             AVISOS.Controls.Add(label7);
@@ -227,25 +214,41 @@
             label4.TabIndex = 0;
             label4.Text = "Para cadastrar um telefone coloque apenas 8 numeros";
             // 
+            // dgv_contatos
+            // 
+            dgv_contatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgv_contatos.DefaultCellStyle = dataGridViewCellStyle2;
+            dgv_contatos.Location = new Point(333, 21);
+            dgv_contatos.Name = "dgv_contatos";
+            dgv_contatos.Size = new Size(352, 306);
+            dgv_contatos.TabIndex = 3;
+            // 
             // FrmContato1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Tomato;
             ClientSize = new Size(723, 499);
-            Controls.Add(AVISOS);
             Controls.Add(dgv_contatos);
+            Controls.Add(AVISOS);
             Controls.Add(groupBox1);
-            ForeColor = SystemColors.ButtonHighlight;
+            ForeColor = SystemColors.ActiveCaptionText;
             Margin = new Padding(3, 2, 3, 2);
             Name = "FrmContato1";
             Text = "FrmContato1";
             Load += FrmContato1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgv_contatos).EndInit();
             AVISOS.ResumeLayout(false);
             AVISOS.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgv_contatos).EndInit();
             ResumeLayout(false);
         }
 
@@ -260,12 +263,12 @@
         private Button btn_alterar;
         private Button btn_excluir;
         private Button btn_cadastrar;
-        private DataGridView dgv_contatos;
         private ComboBox cmb_categoria;
         private GroupBox AVISOS;
         private Label label5;
         private Label label4;
         private Label label6;
         private Label label7;
+        private DataGridView dgv_contatos;
     }
 }
