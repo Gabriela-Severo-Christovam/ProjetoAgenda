@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             groupBox1 = new GroupBox();
             cmb_categoria = new ComboBox();
             btn_alterar = new Button();
@@ -40,10 +41,10 @@
             txtbox_contato = new TextBox();
             dgv_contatos = new DataGridView();
             AVISOS = new GroupBox();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
             label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgv_contatos).BeginInit();
             AVISOS.SuspendLayout();
@@ -157,6 +158,8 @@
             // 
             // dgv_contatos
             // 
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dgv_contatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgv_contatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_contatos.Location = new Point(339, 28);
             dgv_contatos.Margin = new Padding(3, 2, 3, 2);
@@ -180,27 +183,16 @@
             AVISOS.TabStop = false;
             AVISOS.Text = "AVISOS";
             // 
-            // label4
+            // label7
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label4.ForeColor = SystemColors.ActiveCaptionText;
-            label4.Location = new Point(6, 22);
-            label4.Name = "label4";
-            label4.Size = new Size(391, 21);
-            label4.TabIndex = 0;
-            label4.Text = "Para cadastrar um telefone coloque apenas 8 numeros";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label5.ForeColor = SystemColors.ActiveCaptionText;
-            label5.Location = new Point(6, 61);
-            label5.Name = "label5";
-            label5.Size = new Size(559, 21);
-            label5.TabIndex = 1;
-            label5.Text = "Caso você queira alterar o contato de alguem apenas selecione  com um clique";
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label7.ForeColor = SystemColors.ActiveCaptionText;
+            label7.Location = new Point(5, 113);
+            label7.Name = "label7";
+            label7.Size = new Size(555, 21);
+            label7.TabIndex = 3;
+            label7.Text = "NÃO PRECISA COLOCAR O TELEFONE NOVAMENTE, ai clique no botão alterar ";
             // 
             // label6
             // 
@@ -213,16 +205,27 @@
             label6.TabIndex = 2;
             label6.Text = "na tabela(dgv) e coloque apenas  o  nome do contato e a nova categoria";
             // 
-            // label7
+            // label5
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label7.ForeColor = SystemColors.ActiveCaptionText;
-            label7.Location = new Point(5, 113);
-            label7.Name = "label7";
-            label7.Size = new Size(555, 21);
-            label7.TabIndex = 3;
-            label7.Text = "NÃO PRECISA COLOCAR O TELEFONE NOVAMENTE, ai clique no botão alterar ";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label5.ForeColor = SystemColors.ActiveCaptionText;
+            label5.Location = new Point(6, 61);
+            label5.Name = "label5";
+            label5.Size = new Size(559, 21);
+            label5.TabIndex = 1;
+            label5.Text = "Caso você queira alterar o contato de alguem apenas selecione  com um clique";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.ActiveCaptionText;
+            label4.Location = new Point(6, 22);
+            label4.Name = "label4";
+            label4.Size = new Size(391, 21);
+            label4.TabIndex = 0;
+            label4.Text = "Para cadastrar um telefone coloque apenas 8 numeros";
             // 
             // FrmContato1
             // 
