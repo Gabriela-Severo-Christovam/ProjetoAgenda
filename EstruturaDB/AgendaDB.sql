@@ -1,17 +1,4 @@
 
-select cod_categoria AS 'Código', categoria AS 'Categoria' from tbCategorias;
-
-
-CREATE USER 'babalu'@'%' IDENTIFIED BY '1234567';
-select * from mysql.user;
-  
-// exemplo/ teste 
-  SELECT * from tbUsuarios
-  WHERE usuario ="godo" and binary senha ="AlexLind";
-
-
-//CODIGOS ORGANIZADOS
-
 CREATE DATABASE dbAgenda;
 USE dbAgenda;
 
@@ -93,6 +80,73 @@ BEGIN
 	(USER(),
     CURRENT_TIMESTAMP(),
     CONCAT("O contato", new.contato, "foi inserido.")
+    );
+    
+END;
+$$
+
+DELIMITER ;
+
+DELIMITER $$    
+CREATE TRIGGER trlogdeleteContato 
+AFTER
+DELETE
+ON tbContato
+FOR EACH ROW
+BEGIN
+	INSERT INTO tbLog
+    (usuario,
+    data_hora,
+    descriçao)
+    VALUES 
+	(USER(),
+    CURRENT_TIMESTAMP(),
+    CONCAT("O contato", old.contato, "foi excluido.")
+    );
+    
+END;
+$$
+
+DELIMITER ;
+
+DELIMITER $$    
+CREATE TRIGGER TrLogAlterarSenha 
+AFTER
+UPDATE
+ON tbUsuarios
+FOR EACH ROW
+BEGIN
+	INSERT INTO tbLog
+    (usuario,
+    data_hora,
+    descriçao)
+    VALUES 
+	(USER(),
+    CURRENT_TIMESTAMP(),
+    CONCAT("A senha ", old.senha, 'foi alterada para.', new.senha)
+    );
+    
+END;
+$$
+
+DELIMITER ;
+
+
+DELIMITER $$    
+CREATE TRIGGER trlogDeleteUsuario 
+AFTER
+DELETE
+ON tbUsuarios
+FOR EACH ROW
+BEGIN
+	INSERT INTO tbLog
+    (usuario,
+    data_hora,
+    descriçao)
+    VALUES 
+	(USER(),
+    CURRENT_TIMESTAMP(),
+    CONCAT("O usuario", old.usuario, "foi deletado.")
     );
     
 END;

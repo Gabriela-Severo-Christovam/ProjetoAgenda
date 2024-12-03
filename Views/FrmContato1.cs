@@ -88,7 +88,17 @@ namespace ProjetoAgenda.Views
 
             bool resultado = contato.Alterar(usuarioContato, usuarioTelefone ,usuarioCategoria);
 
+            if (resultado)
+            {
+                MessageBox.Show("Cadastro efetuado com sucesso");
+            }
+            else
+            {
+                MessageBox.Show("Não foi possivel alterar o contato");
+            }
+
             AtualizarDataGrid();
+           
         }
     }
 }

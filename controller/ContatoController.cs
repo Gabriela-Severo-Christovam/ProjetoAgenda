@@ -150,9 +150,9 @@ namespace ProjetoAgenda.controller
 
                 // Comando SQL que será executado
                 string sql = @"UPDATE tbContato
-                              SET contato = @contato 
-                              SET telefone = @telefone 
-                              SET categoria = @categoria 
+                              SET contato = @contato, 
+                              telefone = @telefone,
+                              categoria = @categoria 
                               WHERE telefone = @telefone;";
 
                 // Abri a conexão com o banco 
